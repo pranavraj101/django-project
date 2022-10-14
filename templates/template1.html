@@ -1,0 +1,24 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'style.css' %}"/>
+</head>
+<body>
+<h1>My First Heading {{name}}</h1>
+<p>My first paragraph.</p>
+<ol>
+    {% for i in list%}
+    <li>{{i}}</li>
+    {%endfor%}
+</ol>
+
+<h1>
+    <a href="{% url 'hi' name=name %}">Templates</a>
+    <img src="{% static 'car2.jpeg' %}"/>
+
+
+</h1>
+
+</body>
+</html>

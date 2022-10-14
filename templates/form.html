@@ -1,0 +1,80 @@
+{% extends 'varanasi tourism.html' %}
+{% load staticfiles %}
+
+
+{% block title %}
+<title>REGISTER HERE!</title>
+{% endblock  %}
+
+{% block body %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<br>
+<form class="container" style="background-color:skyblue" method="POST" enctype="multipart/form-data">
+    <br>
+    {% csrf_token %}
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <div class="row mb-4">
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="form6Example1" class="form-control" name="fname"/>
+          <label class="form-label" for="form6Example1">First name</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="form6Example2" class="form-control" name="lname"/>
+          <label class="form-label" for="form6Example2">Last name</label>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Text input -->
+    <div class="form-outline mb-4">
+      <input type="text" id="form6Example3" class="form-control" name="cname"/>
+      <label class="form-label" for="form6Example3">Company name</label>
+    </div>
+  
+    <!-- Text input -->
+    <div class="form-outline mb-4">
+      <input type="text" id="form6Example4" class="form-control" name="add"/>
+      <label class="form-label" for="form6Example4">Address</label>
+    </div>
+  
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <input type="email" id="form6Example5" class="form-control" name="email"/>
+      <label class="form-label" for="form6Example5">Email</label>
+    </div>
+  
+    <!-- Number input -->
+    <div class="form-outline mb-4">
+      <input type="number" id="form6Example6" class="form-control" name="phone"/>
+      <label class="form-label" for="form6Example6">Phone</label>
+    </div>
+  
+    <!-- Message input -->
+    <div class="form-outline mb-4">
+      <textarea class="form-control" id="form6Example7" rows="4" name="detials"></textarea>
+      <label class="form-label" for="form6Example7">Additional information</label>
+    </div>
+    
+    <div class="form-outline mb-4">
+        <input type="file" class="form-control" id="form6Example7" rows="4" name="profilepic"/>
+        <label class="form-label" for="form6Example7">Picture</label>
+      </div>
+    <!-- Checkbox -->
+    <div class="form-check d-flex justify-content-center mb-4">
+      <input class="form-check-input me-2" type="checkbox" value="" id="form6Example8" checked name="acc"/>
+      <label class="form-check-label" for="form6Example8"> Create an account? </label>
+    </div>
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Send me the detials for Travel</button>
+  </form>
+  <br>
+  <br>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+{% endblock %}
